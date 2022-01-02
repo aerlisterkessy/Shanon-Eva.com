@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Gallery</title>
+  <link rel="icon" type="image/x-icon" href="Favicon.png">
+  <style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Verdana;
+  padding: 20px;
+}
+.header { 
+  overflow: hidden;
+  background-color: black;
+  padding: 5px 10px;
+}
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header a.logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.header a:hover {
+  background-color: gray;
+  color: white;
+}
+.header a.active {
+  color: white;
+}
+
+.header-right {
+  float: Right;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+</style>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Verdana;
+}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Experience.jpg");
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hero-text button:hover {
+  background-color: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+}
+
+a:active {
+  text-decoration: none;
+}
+</style>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
+<style>
+body {
+  background-image: url('Background 2.jpg');
+}
+</style>
+
+<style>
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.instagram {
+  background: #C13584;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+</style>
+
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 455.5px;
+  border-radius: 1%;
+}
+
+div.gallery:hover {
+  background: #EEEEE0;
+  border: 1px solid #777;
+  border-radius: 1%;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 1%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+<style>
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 6%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="header">
+  <a href="Homepage.html" target="_blank" class="logo">ShanonEva.</a>
+  <div class="header-right">
+    <a class="active" href="Gallery.html">GALLERY</a>
+    <a class="active" href="Homepage.html">HOME</a>
+  </div>
+</div>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:80px">GALLERY</h1>
+    <p><p style="font-size:25px">Myself . Family . Friends</p></p>
+    <br>
+    <br>
+  </div>
+</div>
+<br>
+<div class="icon-bar">
+  <a href="https://www.facebook.com/shanoneva.severinus.7" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="mailto:shanoneva4448@gmail.com" target="_blank" class="google"><i class="fa fa-google"></i></a> 
+  <a href="https://instagram.com/shnneva?utm_medium=copy_link" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+ </div>
+
+<div class="gallery">
+  <a target="_blank" href="1.jpeg">
+    <img src="1.jpeg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Picnic Day</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="2.jpeg">
+    <img src="2.jpeg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Shanon</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="4.jpeg">
+    <img src="4.jpeg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Shanon</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="5.jpeg">
+    <img src="5.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Shanon and Aerlister</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="7.jpeg">
+    <img src="7.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Gathering at Summer Mall</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="9.jpg">
+    <img src="9.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Group Selfie</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="10.jpeg">
+    <img src="10.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Drinking Milo</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="11.jpeg">
+    <img src="11.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Dinner</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="8.jpg">
+    <img src="8.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Shanon and Siblings</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="26.jpg">
+    <img src="26.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">At Beach</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="27.jpg">
+    <img src="27.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">At Restaurant</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="29.jpg">
+    <img src="29.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">At Forest</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="12.jpeg">
+    <img src="12.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Group Project</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="14.jpg">
+    <img src="14.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Eating at KFC</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="17.jpg">
+    <img src="17.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Shanon and Friends</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="28.jpg">
+    <img src="28.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Dinner</div>
+</div>
+
+</body>
+</html>
